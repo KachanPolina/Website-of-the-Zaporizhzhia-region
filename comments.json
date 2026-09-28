@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "id": "1",
+      "page": "ancient-history",
+      "login": "Олена",
+      "text": "Дуже цікава стаття!",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "2",
+      "page": "ancient-history",
+      "login": "Андрій",
+      "text": "Не знав про цю історію.",
+      "date": "20.09.2026"
+    },
+    {
+      "id": "3",
+      "page": "khortytsia",
+      "login": "Марія",
+      "text": "Дуже цікаве місце.",
+      "date": "22.09.2026"
+    },
+    {
+      "page": "ancient-history",
+      "login": "yanik",
+      "text": "1212",
+      "date": "28.09.2026",
+      "id": "4t_WLW_"
+    },
+    {
+      "page": "ancient-history",
+      "login": "polina",
+      "text": "Супер!!",
+      "date": "28.09.2026",
+      "id": "AFMUZ8M"
+    }
+  ]
+}
