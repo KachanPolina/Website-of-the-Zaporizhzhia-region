@@ -13,11 +13,31 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./Assets/Styles/index.css">
+    <link rel="stylesheet" href="./Assets/Styles/index.css" />
+    <link rel="stylesheet" href="./Assets/Styles/ham-menu.css" />
     <script src="./Scripts/button-up.js" defer></script>
+    <script src="./Scripts/ham-menu.js" defer></script>
   </head>
   <body>
     <header class="hero-photo">
+      <!-- Мобільне меню -->
+      <div class="off-screen-menu">
+        <ul>
+          <li><a href="../../index.html">Головна</a></li>
+          <li><a href="./figures.html">Постаті</a></li>
+          <li><a href="./places.html">Місця</a></li>
+          <li><a href="#">Про сайт</a></li>
+        </ul>
+      </div>
+
+      <!-- Бургер -->
+      <nav class="mobile-nav">
+        <div class="ham-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
       <div class="wrap">
         <nav>
           <div class="brand">Запорізький край</div>
@@ -110,7 +130,9 @@
             історичних епох і дозволяє простежити, як змінювалося життя людей на
             цих землях протягом століть.
           </p>
-          <a class="link" href="./Assets/Pages/ancient-history.html">Дослідити історію</a>
+          <a class="link" href="./Assets/Pages/ancient-history.html"
+            >Дослідити історію</a
+          >
         </div>
       </div>
     </div>
