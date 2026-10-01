@@ -35,7 +35,6 @@
 
 /* burger */
 .mobile-nav {
-  display: none;
   padding: 0;
 }
 
@@ -49,7 +48,7 @@
 .ham-menu span {
   height: 5px;
   width: 100%;
-  background-color: brown;
+  background-color: rgb(211, 176, 107);
   border-radius: 25px;
   position: absolute;
   top: 50%;
@@ -83,13 +82,12 @@
 
 .desktop-nav {
   padding: 1rem;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-@media (max-width: 749px) {
+@media (max-width: 799px) {
   .mobile-nav {
     display: flex;
     position: absolute;
@@ -103,7 +101,7 @@
   }
 }
 
-@media (min-width: 750px) {
+@media (min-width: 800px) {
   .mobile-nav {
     display: none;
   }

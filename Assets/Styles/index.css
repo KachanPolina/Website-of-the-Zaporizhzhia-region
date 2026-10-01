@@ -1,4 +1,3 @@
-@import url('./button-up.css');
 :root {
   --bg: #0c0a08;
   --gold: #d3b06b;
@@ -16,6 +15,7 @@
 }
 html {
   scroll-padding-top: env(safe-area-inset-top, 0px);
+  scroll-behavior: smooth;
 }
 body {
   background: var(--bg);
@@ -172,7 +172,7 @@ section {
   align-items: flex-start;
   gap: 20px;
   overflow-x: auto;
-  padding-bottom: 10px;
+  padding: 20px 0 30px;
 }
 .card {
   position: relative;
@@ -363,6 +363,161 @@ h3 {
   color: var(--cream);
 }
 
+/*  БЛОК «ЗАПОРОЗЬКЕ КОЗАЦТВО» — дзеркальний (фото справа)  */
+.split--reverse {
+  grid-template-columns: 1fr 1.2fr;
+}
+.split--reverse .split-photo::before {
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/zaporozke-kozatstvo.jpg') center 35% / cover no-repeat;
+  -webkit-mask-image:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      #000 42%,
+      #000 78%,
+      transparent 100%
+    ),
+    linear-gradient(
+      180deg,
+      transparent 0%,
+      #000 28%,
+      #000 72%,
+      transparent 100%
+    );
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      #000 42%,
+      #000 78%,
+      transparent 100%
+    ),
+    linear-gradient(
+      180deg,
+      transparent 0%,
+      #000 28%,
+      #000 72%,
+      transparent 100%
+    );
+  mask-composite: intersect;
+}
+.split--reverse .split-photo h2 {
+  margin-left: 8%;
+  margin-right: 0;
+  text-align: left;
+}
+
+/*  БЛОК «МЕНОНІТИ» — така ж рамка, як у «Давньої історії», інше фото  */
+.split--menoniti .split-photo::before {
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/menoniti-kolonisti.jpg') center 35% / cover no-repeat;
+}
+
+/*  БЛОК «НАРОДЖЕННЯ ПРОМИСЛОВОГО ЗАПОРІЖЖЯ» — фото справа, інше фото  */
+.split--promyslove .split-photo::before {
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/promyslove-zaporizhzhia.jpg') center 35% / cover no-repeat;
+}
+
+/*  БЛОК «ДНІПРОГЕС» — фото зліва, інше фото  */
+.split--dniprohes .split-photo::before {
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/dniproges.jpg') center 35% / cover no-repeat;
+}
+
+/*  БЛОК «ЯК ЗМІНЮВАЛОСЯ ЗАПОРІЖЖЯ» — фото справа, інше фото  */
+.split--zminy .split-photo::before {
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/zminy-zaporizhzhia.jpg') center 35% / cover no-repeat;
+}
+
+/*  БЛОК «АРХЕОЛОГІЧНІ ТАЄМНИЦІ» — фото зліва, інше фото  */
+.split--arheo .split-photo::before {
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/arheologiya.jpg') center 35% / cover no-repeat;
+}
+
+/*  ФОТО ТА АНІМАЦІЯ КАРТОК  */
+.card {
+  display: block;
+  cursor: pointer;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+.card .ph {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.6s ease;
+}
+.c1 .ph {
+  background-image: url('../Images/card-davnya.jpg');
+}
+.c2 .ph {
+  background-image: url('../Images/card-kozaky.jpg');
+}
+.c3 .ph {
+  background-image: url('../Images/card-promyslove.jpg');
+}
+.c4 .ph {
+  background-image: url('../Images/card-dniprohes.jpg');
+}
+.card:hover {
+  transform: translateY(-12px);
+  border-color: var(--gold);
+  box-shadow:
+    0 18px 36px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(211, 176, 107, 0.25);
+}
+.card:hover .ph {
+  transform: scale(1.07);
+}
+/* єдиний «золотистий» фільтр на фото карток */
+.card .ph {
+  filter: sepia(0.6) saturate(0.85) contrast(1.08) brightness(0.82);
+  transition:
+    transform 0.6s ease,
+    filter 0.6s ease;
+}
+.card .ph::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(110, 75, 30, 0.28);
+  mix-blend-mode: multiply;
+}
+.card:hover .ph {
+  filter: sepia(0.3) saturate(0.95) contrast(1.05) brightness(0.95);
+}
+/* сильніше затемнення внизу, щоб текст читався на будь-якому фото */
+.card .shade {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.1) 25%,
+    rgba(6, 5, 3, 0.65) 62%,
+    rgba(6, 5, 3, 0.96) 100%
+  );
+}
+.card .cap h3 {
+  transition: color 0.3s;
+}
+.card:hover .cap h3 {
+  color: var(--cream);
+}
+.split {
+  scroll-margin-top: 40px;
+}
+
 footer {
   text-align: center;
   color: var(--gold-soft);
@@ -393,6 +548,16 @@ footer {
   }
   .split-photo h2 {
     margin-left: 6%;
+  }
+  .split--reverse {
+    grid-template-columns: 1fr;
+  }
+  .split--reverse .split-photo {
+    order: -1;
+  }
+  .split--reverse .split-photo h2 {
+    margin-left: 6%;
+    margin-right: 0;
   }
 }
 @media (max-width: 600px) {

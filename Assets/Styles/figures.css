@@ -21,3 +21,10 @@
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url('../Images/Богдан_Хмельицький.jpg');
 }
+
+@media (max-width: 500px) {
+  .split-photo {
+    width: 200px;
+    height: 250px;
+  }
+}
