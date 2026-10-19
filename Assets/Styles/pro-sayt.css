@@ -1,0 +1,393 @@
+:root {
+  --bg: #0a0907;
+  --gold: #e0b873;
+  --gold-soft: #a9895c;
+  --cream: #efe8d8;
+  --text: #cfc7b5;
+  --line: rgba(211, 176, 107, 0.22);
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-padding-top: env(safe-area-inset-top, 0px);
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--gold);
+  font-weight: 600;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+.main {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* НАВІГАЦІЯ */
+.topbar {
+  border-bottom: 1px solid var(--line);
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+.navlinks {
+  display: flex;
+  gap: 34px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--cream);
+  flex-wrap: wrap;
+}
+.navlinks a {
+  padding: 6px 0;
+  border-bottom: 1px solid transparent;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+.navlinks a:hover {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+.navlinks a.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* ФОТО З РАМКОЮ */
+.frame {
+  position: relative;
+  display: block;
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--bg);
+}
+.frame img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  transform: scale(1.12);
+}
+.frame::after,
+.tile .pic::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--gold-soft);
+  border-radius: 3px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.row {
+  display: grid;
+  align-items: center;
+  gap: 48px;
+  padding: 50px 0;
+  border-bottom: 1px solid var(--line);
+}
+.row:last-of-type {
+  border-bottom: none;
+}
+
+/* 1. ПРО САЙТ */
+.intro {
+  grid-template-columns: 1fr 1fr;
+  padding: 60px 0 56px;
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--gold);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+.eyebrow::after {
+  content: '';
+  width: 80px;
+  height: 1px;
+  background: var(--gold);
+}
+.intro .frame {
+  height: 210px;
+}
+.intro h1 {
+  font-size: clamp(30px, 3.6vw, 40px);
+  line-height: 1.2;
+  margin-bottom: 22px;
+}
+.intro p {
+  color: var(--text);
+  max-width: 460px;
+}
+
+/* 2. МЕТА */
+.goal {
+  grid-template-columns: 1fr 1fr;
+}
+.goal .frame {
+  height: 192px;
+}
+.goal h2 {
+  font-size: clamp(28px, 3.2vw, 34px);
+  margin-bottom: 16px;
+}
+.goal p {
+  margin-bottom: 12px;
+  max-width: 430px;
+}
+
+/* 3. ЩО МОЖНА ЗНАЙТИ */
+.find {
+  display: block;
+}
+.find > h2 {
+  font-size: clamp(26px, 3vw, 32px);
+  margin-bottom: 24px;
+}
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.tile {
+  border: 1px solid var(--gold-soft);
+  border-radius: 3px;
+  overflow: hidden;
+  background: #0f0c08;
+  display: flex;
+  flex-direction: column;
+}
+.tile .pic {
+  position: relative;
+  height: 122px;
+  overflow: hidden;
+  background: var(--bg);
+}
+.tile .pic::after {
+  border: none;
+  border-bottom: 1px solid var(--gold-soft);
+  border-radius: 0;
+}
+.tile .pic img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.12);
+}
+.tile .body {
+  padding: 16px 16px 20px;
+}
+.tile .head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.tile .head svg {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.tile h3 {
+  font-size: 17px;
+  line-height: 1.25;
+}
+.tile p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+/* 4. ДЛЯ КОГО */
+.for {
+  grid-template-columns: 320px 1fr;
+}
+.for .frame {
+  height: 160px;
+}
+.for h2 {
+  font-size: clamp(24px, 2.8vw, 28px);
+  margin-bottom: 12px;
+}
+.for p {
+  /* max-width: 400px; */
+  min-width: 200px;
+}
+
+/* 5. ЧОМУ ВАЖЛИВО */
+.why {
+  grid-template-columns: 1fr 1fr;
+}
+.why .frame {
+  height: 170px;
+}
+.why h2 {
+  font-size: clamp(24px, 2.8vw, 28px);
+  margin-bottom: 12px;
+}
+.why p {
+  max-width: 470px;
+}
+.why .quote {
+  margin-top: 12px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 19px;
+  color: var(--gold);
+}
+
+/* ПОДЯКА */
+.thanks {
+  text-align: center;
+  padding: 44px 0 20px;
+  position: relative;
+}
+.thanks::before {
+  content: '';
+  display: block;
+  width: min(440px, 70%);
+  height: 1px;
+  margin: 0 auto 22px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold-soft),
+    transparent
+  );
+}
+.thanks p.big {
+  font-family: 'Playfair Display', serif;
+  color: var(--gold);
+  font-size: 16px;
+  font-weight: 600;
+}
+.thanks p.small {
+  font-size: 13px;
+  color: var(--gold-soft);
+  margin-top: 4px;
+}
+
+footer {
+  text-align: center;
+  color: var(--gold-soft);
+  font-size: 13px;
+  padding: 26px 0 44px;
+}
+.tile {
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.tile:hover {
+  transform: translateY(-12px);
+  /* border-color: var(--gold); */
+  box-shadow:
+    0 18px 36px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(211, 176, 107, 0.25);
+}
+.tile:hover {
+  transform: scale(1.07);
+}
+
+@media (max-width: 980px) {
+  .wrap {
+    padding: 0 28px;
+  }
+  .tiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 760px) {
+  .intro,
+  .goal,
+  .for,
+  .why {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .intro .frame,
+  .goal .frame,
+  .for .frame,
+  .why .frame {
+    height: 220px;
+  }
+  .for .frame {
+    order: -1;
+  }
+  .goal .frame {
+    order: -1;
+  }
+  .why .frame {
+    order: 2;
+  }
+  .navlinks {
+    gap: 20px;
+  }
+}
+@media (max-width: 520px) {
+  .wrap {
+    padding: 0 18px;
+  }
+  .tiles {
+    grid-template-columns: 1fr;
+  }
+  .tile .pic {
+    height: 170px;
+  }
+}

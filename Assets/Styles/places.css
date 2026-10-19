@@ -19,7 +19,37 @@
 .first-photo::before {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url('../Images/DneproGES_Khortitsa.jpg');
+    url('../Images/hortica.jpg');
+}
+
+.second-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/oak.jpg');
+}
+
+.third-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/kosa.jpg');
+}
+
+.fourth-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/carer.jfif');
+}
+
+.fifth-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/saduba-popova.jpg');
+}
+
+.sixth-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/ostriv-baida.jpg');
 }
 
 @media (max-width: 500px) {

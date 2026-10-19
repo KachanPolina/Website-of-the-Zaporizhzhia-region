@@ -2,6 +2,14 @@
 
 /* Стилі для сторінки Народження промислового Запоріжжя */
 
+.c1,
+.c2,
+.c3,
+.c4 {
+  height: 420px;
+  margin-top: 0;
+}
+
 .split-text h1 {
   font-family: 'Playfair Display', serif;
   color: var(--gold);
@@ -14,37 +22,38 @@
 .industrial-hero-photo::before {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url('../Images/zaporizhzhia-hero.jpg');
+    url('../Images/oleksandrivsk.jpg');
 }
 
-.dnieproges-photo::before {
+.second-photo::before {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url('../Images/davnya-istoriya.jpg');
+    url('../Images/zavodu.jpg');
 }
 
 /* Зображення для карточок */
 .c1 .ph {
-  background-image: url('../Images/zaporizhzhia-hero.jpg');
+  background-image: url('../Images/colores-dniproges.jfif');
 }
 
 .c2 .ph {
-  background-image: url('../Images/card-kozaky.jpg');
+  background-image: url('../Images/zavodu.jpg');
 }
 
 .c3 .ph {
-  background-image: url('../Images/davnya-istoriya.jpg');
+  background-image: url('../Images/Круглий_будинок.jpg');
 }
 
 .c4 .ph {
-  background-image: url('../Images/people.jpg');
+  background-image: url('../Images/produkciya\ \ \ zavodu.jpg');
 }
 
 .cards {
   display: flex;
   align-items: flex-start;
   gap: 20px;
-  padding: 12px 8px;
+  overflow-x: auto;
+  padding-bottom: 10px;
 }
 
 .card {

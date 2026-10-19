@@ -19,7 +19,43 @@
 .first-photo::before {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url('../Images/Богдан_Хмельицький.jpg');
+    url('../Images/ivan-sirko.jfif');
+}
+
+.second-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/Petro_Konashevych-Sahaidachny.jpg');
+}
+
+.third-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/Нестор_Махно.jpg');
+}
+
+.fourth-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/bajda.jpg');
+}
+
+.fifth-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/Illia_Stamboli.jpg');
+}
+
+.sixth-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/Ребро_Петро_Павлович.jpg');
+}
+
+.seventh-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/maria_sokil.jfif');
 }
 
 @media (max-width: 500px) {

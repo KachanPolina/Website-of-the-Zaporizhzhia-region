@@ -1,5 +1,13 @@
 @import url('./index.css');
 
+.split-text h1 {
+  font-family: 'Playfair Display', serif;
+  color: var(--gold);
+  font-size: clamp(28px, 3.8vw, 42px);
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
 .cards {
   display: flex;
   align-items: flex-start;
@@ -27,17 +35,6 @@
     rgba(0, 0, 0, 0.05) 35%,
     rgba(6, 5, 3, 0.94) 100%
   );
-}
-.card .num {
-  position: relative;
-  z-index: 2;
-  display: block;
-  padding: 16px 18px 0;
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  color: var(--gold-soft);
-  font-size: 15px;
-  letter-spacing: 1px;
 }
 .card .cap {
   position: absolute;
@@ -69,19 +66,19 @@
 }
 
 .c1 .ph {
-  background-image: url('../Images/people.jpg');
+  background-image: url('../Images/kamiyana-mogula.jpg');
 }
 
 .c2 .ph {
-  background-image: url('../Images/zaporizhzhia-hero.jpg');
+  background-image: url('../Images/kurgan.jfif');
 }
 
 .c3 .ph {
-  background-image: url('../Images/davnya-istoriya.jpg');
+  background-image: url('../Images/davni-slovyanu.jpg');
 }
 
 .c4 .ph {
-  background-image: url('../Images/zaporizhzhia-hero.jpg');
+  background-image: url('../Images/medival.jpg');
 }
 
 .cards {
@@ -109,8 +106,8 @@
 }
 
 .card:hover {
-  transform: scale(1.15);
-  z-index: 10;
+  transform: translateY(-8px);
+  border-color: var(--gold);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.55);
 }
 
@@ -184,7 +181,7 @@ h3 {
 .second-photo::before {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url('../Images/colores-dniproges.jfif');
+    url('../Images/khortitsa.jpg');
 }
 
 .split-text p {
