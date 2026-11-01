@@ -31,6 +31,48 @@
     url('../Images/khmelnitskiu-war.jfif');
 }
 
+.third-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/cosaaks-third-photo.jpg');
+}
+
+.fourth-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/cosaaks-fourth-photo.jpg');
+}
+
+.fifth-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/cosaaks-fifth-photo.jpg');
+}
+
+.sixth-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/cosaaks-sixth-photo.jpg');
+}
+
+.seventh-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/cosaaks-seventh-photo.jpg');
+}
+
+.eighth-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/cosaaks-eight-photo.jpg');
+}
+
+.ninth-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/cosaaks-ninth-photo.jpg');
+}
+
 /* Зображення для карточок */
 .c1 .ph {
   background-image: url('../Images/zaporizka-sich.jpg');

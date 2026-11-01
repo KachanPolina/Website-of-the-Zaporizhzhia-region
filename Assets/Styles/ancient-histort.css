@@ -184,6 +184,42 @@ h3 {
     url('../Images/khortitsa.jpg');
 }
 
+.third-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/dniprovskiy-step.jpg');
+}
+
+.fourth-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/ancient-history-fourth-photo.jfif');
+}
+
+.fifth-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/ancient-history-fifth-photo.jfif');
+}
+
+.sixth-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/ancient-history-sixth-photo.jfif');
+}
+
+.seventh-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/ancient-history-seventh-photo.jfif');
+}
+
+.eighth-photo::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../Images/ancient-history-eighth-photo.jfif');
+}
+
 .split-text p {
   color: #cabfa8;
   font-size: 18px;
