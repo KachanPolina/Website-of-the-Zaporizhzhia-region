@@ -2,12 +2,21 @@
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="description" content="Перевірте свої знання про історію, культуру та видатні місця Запорізького краю." />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="Перевірте свої знання про історію, культуру та видатні місця Запорізького краю."
+    />
     <title>Вікторина — Запорізький край</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../Styles/quiz.css" />
     <link rel="stylesheet" href="../Styles/ham-menu.css" />
     <script src="../../Scripts/ham-menu.js" defer></script>
@@ -15,40 +24,68 @@
   </head>
   <body>
     <header class="quiz-header">
-      <div class="off-screen-menu"><ul>
-        <li><a href="../../index.html">Головна</a></li>
-        <li><a href="./figures.html">Постаті</a></li>
-        <li><a href="./places.html">Місця</a></li>
-        <li><a href="./quiz.html" aria-current="page">Вікторина</a></li>
-        <li><a href="./pro-sayt.html">Про сайт</a></li>
-      </ul></div>
-      <nav class="mobile-nav"><div class="ham-menu"><span></span><span></span><span></span></div></nav>
-      <div class="wrap"><nav class="desktop-nav">
-        <a class="brand" href="../../index.html">Запорізький край</a>
-        <div class="navlinks">
-          <a href="../../index.html">Головна</a><a href="./figures.html">Постаті</a>
-          <a href="./places.html">Місця</a><a href="./quiz.html" aria-current="page">Вікторина</a>
-          <a href="./pro-sayt.html">Про сайт</a>
-        </div>
-      </nav></div>
+      <div class="off-screen-menu">
+        <ul>
+          <li><a href="../../index.html">Головна</a></li>
+          <li><a href="./figures.html">Постаті</a></li>
+          <li><a href="./places.html">Місця</a></li>
+          <li><a href="./quiz.html" aria-current="page">Вікторина</a></li>
+          <li><a href="./pro-sayt.html">Про сайт</a></li>
+        </ul>
+      </div>
+      <nav class="mobile-nav">
+        <div class="ham-menu"><span></span><span></span><span></span></div>
+      </nav>
+      <div class="wrap">
+        <nav class="desktop-nav">
+          <a class="brand" href="../../index.html">Запорізький край</a>
+          <div class="navlinks">
+            <a href="../../index.html">Головна</a
+            ><a href="./figures.html">Постаті</a>
+            <a href="./places.html">Місця</a
+            ><a href="./quiz.html" aria-current="page">Вікторина</a>
+            <a href="./pro-sayt.html">Про сайт</a>
+          </div>
+        </nav>
+      </div>
       <div class="hero-copy">
         <span class="eyebrow">Історія Запорізького краю</span>
         <h1>Перевірте, що ви знаєте</h1>
-        <p>Від давніх народів і козацької доби до ДніпроГЕСу та сучасного міста.</p>
+        <p>
+          Від давніх народів і козацької доби до ДніпроГЕСу та сучасного міста.
+        </p>
       </div>
     </header>
 
     <main class="wrap quiz-wrap">
       <section class="quiz-card" aria-labelledby="quiz-title">
-        <div class="quiz-topline"><span id="question-count">Питання 1 з 12</span><span id="score-label">Рахунок: 0</span></div>
-        <div class="progress-track" role="progressbar" aria-label="Прогрес вікторини" aria-valuemin="0" aria-valuemax="16" aria-valuenow="0"><span id="progress"></span></div>
+        <div class="quiz-topline">
+          <span id="question-count">Питання 1 з 12</span
+          ><span id="score-label">Рахунок: 0</span>
+        </div>
+        <div
+          class="progress-track"
+          role="progressbar"
+          aria-label="Прогрес вікторини"
+          aria-valuemin="0"
+          aria-valuemax="16"
+          aria-valuenow="0"
+        >
+          <span id="progress"></span>
+        </div>
         <p class="category" id="category"></p>
         <h2 id="quiz-title" tabindex="-1"></h2>
         <div class="answers" id="answers"></div>
         <p class="feedback" id="feedback" aria-live="polite"></p>
-        <div class="quiz-actions"><button class="next-button" id="next" type="button" disabled>Наступне питання <span aria-hidden="true">→</span></button></div>
+        <div class="quiz-actions">
+          <button class="next-button" id="next" type="button" disabled>
+            Наступне питання <span aria-hidden="true">→</span>
+          </button>
+        </div>
       </section>
-      <p class="quiz-note">Запитання охоплюють теми всіх історичних розділів сайту.</p>
+      <p class="quiz-note">
+        Запитання охоплюють теми всіх історичних розділів сайту.
+      </p>
     </main>
     <footer>© Запорізький край</footer>
   </body>
